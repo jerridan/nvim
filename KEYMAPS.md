@@ -76,7 +76,7 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
-| Normal, Visual | `<leader>f` | | Format buffer |
+| Normal, Visual | `<leader>f` | `conform.format` | Format buffer |
 
 ## UI and Appearance
 
@@ -84,3 +84,18 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 |------|-----|--------|-------------|
 | Normal | `<leader>tt` | | Toggle theme |
 | Normal | `<leader>e` | `:NvimTreeToggle<CR>` | Toggle file explorer |
+
+## Mini.nvim
+
+| Mode | Key | Action | Description |
+|------|-----|--------|-------------|
+| Normal | `sa` | `mini.surround` | Add surrounding (sa{motion}{char}) |
+| Normal | `sd` | `mini.surround` | Delete surrounding (sd{char}) |
+| Normal | `sr` | `mini.surround` | Replace surrounding (sr{target}{replacement}) |
+| Visual | `sa` | `mini.surround` | Add surrounding to visual selection |
+
+## Git
+
+| Mode | Key | Action | Description |
+|------|-----|--------|-------------|
+| Normal | `<leader>h` | | Git [H]unk operations |
