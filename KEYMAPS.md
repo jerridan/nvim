@@ -98,4 +98,18 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
-| Normal | `<leader>h` | | Git [H]unk operations |
+| Normal | `<leader>gn` | `gitsigns.next_hunk` | Go to next git hunk |
+| Normal | `<leader>gp` | `gitsigns.prev_hunk` | Go to previous git hunk |
+| Normal | `<leader>gd` | `gitsigns.preview_hunk` | Preview git hunk changes |
+| Normal | `<leader>gb` | `gitsigns.blame_line` | Toggle git blame for current line |
+| Normal | `<leader>gB` | `gitsigns.blame_line (full)` | Toggle git blame with full details |
+| Normal | `<leader>gD` | `gitsigns.diffthis` | Open git diff view |
+| Normal | `<leader>gs` | `gitsigns.stage_hunk` | Stage git hunk |
+| Visual | `<leader>gs` | `gitsigns.stage_hunk (selection)` | Stage selected lines |
+| Normal | `<leader>gr` | `gitsigns.reset_hunk` | Reset (unstage) git hunk |
+| Visual | `<leader>gr` | `gitsigns.reset_hunk (selection)` | Reset (unstage) selected lines |
+| Normal | `<leader>gu` | `gitsigns.undo_stage_hunk` | Undo last staged hunk |
+| Normal | `<leader>gS` | `gitsigns.stage_buffer` | Stage entire buffer |
+| Normal | `<leader>gR` | `gitsigns.reset_buffer` | Reset (unstage) entire buffer |
+| Normal | `<leader>gw` | `gitsigns.toggle_word_diff` | Toggle word diff view |
+| Normal | `<leader>gx` | `gitsigns.toggle_deleted` | Toggle deleted lines highlight |
