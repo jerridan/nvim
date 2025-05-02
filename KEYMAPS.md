@@ -113,3 +113,4 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<leader>gR` | `gitsigns.reset_buffer` | Reset (unstage) entire buffer |
 | Normal | `<leader>gw` | `gitsigns.toggle_word_diff` | Toggle word diff view |
 | Normal | `<leader>gx` | `gitsigns.toggle_deleted` | Toggle deleted lines highlight |
+| Normal | `<leader>gX` | `gitsigns.reset_buffer_index + reset_buffer` | Revert all changes in current file only |

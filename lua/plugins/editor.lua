@@ -89,6 +89,7 @@ return {
         -- Additional features
         map('n', '<leader>gw', gs.toggle_word_diff, { desc = 'Git Word diff toggle' })
         map('n', '<leader>gx', gs.toggle_deleted, { desc = 'Git toggle deleted' })
+        map('n', '<leader>gX', function() gs.reset_buffer_index(); gs.reset_buffer() end, { desc = 'Git revert all changes in current file' })
       end,
     },
   },
