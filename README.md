@@ -94,14 +94,11 @@ You can extend this configuration by:
 
 ## Key Mappings
 
-| Mode | Key | Action |
-|------|-----|--------|
-| Normal | `<Space>` | Leader key |
-| Normal | `<Leader>ff` | Find files |
-| Normal | `<Leader>fg` | Live grep |
-| Normal | `<Leader>e` | File explorer |
-| Normal | `gc` | Toggle comment |
-| ... | ... | ... |
+For a comprehensive list of all key mappings in this configuration, please refer to the [KEYMAPS.md](./KEYMAPS.md) file.
+
+Keymaps are defined in several locations:
+- Core keymaps: `lua/core/keymaps.lua`
+- Plugin-specific keymaps: Inside respective plugin configuration files in `lua/plugins/`
 
 ## Acknowledgements
 
