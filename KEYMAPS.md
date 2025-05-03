@@ -114,3 +114,4 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<leader>gw` | `gitsigns.toggle_word_diff` | Toggle word diff view |
 | Normal | `<leader>gx` | `gitsigns.toggle_deleted` | Toggle deleted lines highlight |
 | Normal | `<leader>gX` | `gitsigns.reset_buffer_index + reset_buffer` | Revert all changes in current file only |
+| Normal | `<leader>gk` | `vim-fugitive` | Git stage all changes and commit with message |
