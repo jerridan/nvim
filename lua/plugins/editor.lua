@@ -163,6 +163,10 @@ return {
   -- Git commands support via vim-fugitive
   {
     'tpope/vim-fugitive',
+    dependencies = {
+      -- GitHub support for fugitive
+      'tpope/vim-rhubarb',
+    },
     cmd = { 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
     keys = {
       { '<leader>gk', 
@@ -178,6 +182,8 @@ return {
         end, 
         desc = 'Git stage and commit with message' 
       },
+      -- Add new keymap for GBrowse
+      { '<leader>go', '<cmd>GBrowse<CR>', desc = 'Git open file in browser' },
     },
   },
 }
