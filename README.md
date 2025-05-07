@@ -9,6 +9,7 @@ Key features:
 * Carefully selected plugins for coding and productivity
 * Sensible defaults with modern Neovim features
 * Well-documented and easy to extend
+* Automatic file saving to prevent data loss
 
 ## Structure
 
@@ -61,6 +62,16 @@ This configuration uses [lazy.nvim](https://github.com/folke/lazy.nvim) for plug
 - Lazy-loading for faster startup
 - Automatic plugin installation
 - Simple plugin specification
+
+### Autosave Functionality
+
+This configuration includes automatic file saving to prevent data loss:
+- Files are automatically saved when:
+  - You exit insert mode
+  - Text is changed in normal mode
+  - Neovim loses focus
+- Only modified buffers are saved
+- Silent operation (no notifications) to avoid workflow interruption
 
 ### LSP Support
 
