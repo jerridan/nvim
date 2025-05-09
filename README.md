@@ -95,6 +95,68 @@ Efficient file management with:
 - File explorer
 - Buffer management
 
+## Language Server Configuration
+
+This configuration uses the Language Server Protocol (LSP) to provide intelligent code features like autocompletion, diagnostics, and code navigation.
+
+### Enabling Autocompletion for Additional Languages
+
+1. Edit `lua/config/lsp/servers.lua` and uncomment or add server configurations:
+
+```lua
+return {
+  -- Python
+  pyright = {},
+  
+  -- TypeScript/JavaScript
+  tsserver = {},
+  
+  -- Swift
+  sourcekit = {},
+  
+  -- Rust
+  rust_analyzer = {},
+  
+  -- C/C++
+  clangd = {},
+  
+  -- Go
+  gopls = {},
+  
+  -- Already configured for Lua
+  lua_ls = {
+    settings = {
+      Lua = {
+        completion = {
+          callSnippet = 'Replace',
+        },
+      },
+    },
+  },
+}
+```
+
+2. Install the required language servers through Mason:
+   - Open Neovim and run `:Mason`
+   - Navigate to the desired language server (e.g., pyright, sourcekit-lsp)
+   - Press `i` to install
+   
+   Or use the command line interface:
+   ```
+   :MasonInstall pyright sourcekit-lsp tsserver rust-analyzer clangd gopls
+   ```
+
+3. Restart Neovim for the changes to take effect
+
+### Language-Specific Setup Notes
+
+- **Python**: Requires `pyright` server
+- **Swift**: Requires `sourcekit-lsp` server
+- **TypeScript/JavaScript**: Requires `tsserver`
+- **Rust**: Requires `rust-analyzer`
+- **C/C++**: Requires `clangd`
+- **Go**: Requires `gopls`
+
 ## Customization
 
 You can extend this configuration by:
