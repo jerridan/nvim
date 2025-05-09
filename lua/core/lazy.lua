@@ -17,7 +17,8 @@ require('lazy').setup({
   { import = 'plugins.ui' },
   { import = 'plugins.editor' },
   { import = 'plugins.lsp' },
-  { import = 'plugins.coding' },
+  { import = 'plugins.coding.index' },
+
 
   -- You can still add plugins directly here if you prefer
   { 'tpope/vim-sleuth', enabled = false }, -- Detect tabstop and shiftwidth automatically
