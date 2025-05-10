@@ -23,11 +23,20 @@ Key features:
 │   │   ├── keymaps.lua   # Key mappings
 │   │   ├── lazy.lua      # Plugin manager setup
 │   │   └── options.lua   # Neovim options
-│   └── plugins/          # Plugin specifications by category
-│       ├── coding.lua    # Code-related plugins
-│       ├── editor.lua    # General editing plugins
-│       ├── lsp.lua       # LSP configuration
-│       └── ui.lua        # User interface plugins
+│   ├── plugins/          # Plugin specifications by category
+│   │   ├── coding/       # Code-related plugins
+│   │   │   ├── index.lua # Imports all coding plugins
+│   │   │   └── ...       # Individual plugin files
+│   │   ├── editor/       # General editing plugins
+│   │   │   ├── index.lua # Imports all editor plugins
+│   │   │   └── ...       # Individual plugin files
+│   │   ├── lsp/          # LSP configuration
+│   │   │   ├── index.lua # Imports all LSP plugins
+│   │   │   └── ...       # Individual plugin files
+│   │   └── ui/           # User interface plugins
+│   │       ├── index.lua # Imports all UI plugins
+│   │       └── ...       # Individual plugin files
+│   └── config/           # Plugin-specific configurations
 └── after/                # Filetype-specific settings
 ```
 
@@ -162,8 +171,13 @@ return {
 You can extend this configuration by:
 
 1. Modifying files in `lua/core/` for Neovim settings
-2. Adding/modifying plugins in `lua/plugins/` 
-3. Adding specialized settings in `after/`
+2. Adding/modifying plugins in the appropriate subdirectory of `lua/plugins/`:
+   - `coding/` for code completion and snippets
+   - `editor/` for editing tools like fuzzy finders and Git integration
+   - `lsp/` for language server configurations
+   - `ui/` for themes and visual elements
+3. Customizing plugin-specific configurations in `lua/config/`
+4. Adding specialized settings in `after/`
 
 ## Key Mappings
 
@@ -171,7 +185,7 @@ For a comprehensive list of all key mappings in this configuration, please refer
 
 Keymaps are defined in several locations:
 - Core keymaps: `lua/core/keymaps.lua`
-- Plugin-specific keymaps: Inside respective plugin configuration files in `lua/plugins/`
+- Plugin-specific keymaps: Inside the respective plugin files in subdirectories of `lua/plugins/`
 
 ## Acknowledgements
 
