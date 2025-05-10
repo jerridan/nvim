@@ -9,4 +9,5 @@ return {
   require("plugins.ui.nvim-tree"),
   require("plugins.ui.mini-statusline"),
   require("plugins.ui.todo-comments"),
+  require("plugins.ui.indent-blankline"),
 }
