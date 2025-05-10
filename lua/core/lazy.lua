@@ -16,7 +16,7 @@ require('lazy').setup({
   -- Import all plugin specs from their dedicated files
   { import = 'plugins.ui.index' },
   { import = 'plugins.editor.index' },
-  { import = 'plugins.lsp' },
+  { import = 'plugins.lsp.index' },
   { import = 'plugins.coding.index' },
 
 
