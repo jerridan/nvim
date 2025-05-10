@@ -82,7 +82,7 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
-| Normal | `<leader>e` | `:NvimTreeToggle<CR>` | Toggle file explorer |
+| Normal | `\` | `:Neotree reveal<CR>` | Open Neo-tree and reveal current file |
 | Normal | `<leader>tt` | | Toggle theme |
 
 ## Mini.nvim
