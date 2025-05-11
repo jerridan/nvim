@@ -4,11 +4,16 @@ return {
   -- Example server configurations
   -- Uncomment and adjust as needed
 
+  -- Python
+  pyright = {},
+  -- Swift
+  sourcekit = {},
+  -- TypeScript,
+  ts_ls = {},
+
   -- clangd = {},
   -- gopls = {},
-  -- pyright = {},
   -- rust_analyzer = {},
-  -- ts_ls = {},
 
   -- Lua language server
   lua_ls = {
