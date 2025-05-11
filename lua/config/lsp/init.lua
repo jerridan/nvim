@@ -95,6 +95,21 @@ vim.diagnostic.config {
 -- Get LSP capabilities with blink.cmp integration
 local capabilities = require('blink.cmp').get_lsp_capabilities()
 
+-- Configure sourcekit LSP manually (not through Mason)
+-- This uses the sourcekit-lsp executable that comes with Xcode
+local lspconfig = require('lspconfig')
+lspconfig.sourcekit.setup {
+  capabilities = vim.tbl_deep_extend('force', {}, capabilities, {
+    workspace = {
+      didChangeWatchedFiles = {
+        dynamicRegistration = true,
+      },
+    },
+  }),
+  cmd = { 'xcrun', 'sourcekit-lsp' },
+  filetypes = { 'swift' },
+}
+
 -- Load server configurations
 local servers = require('config.lsp.servers')
 
@@ -111,6 +126,11 @@ require('mason-lspconfig').setup {
   automatic_installation = false,
   handlers = {
     function(server_name)
+      -- Skip sourcekit since we've configured it manually above
+      if server_name == 'sourcekit' then
+        return
+      end
+      
       local server = servers[server_name] or {}
       -- Merge capabilities
       server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})

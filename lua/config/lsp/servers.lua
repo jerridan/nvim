@@ -6,18 +6,7 @@ return {
 
   -- Python
   pyright = {},
-  
-  -- Swift
-  sourcekit = {
-    capabilities = {
-      workspace = {
-        didChangeWatchedFiles = {
-          dynamicRegistration = true,
-        },
-      },
-    },
-  },
-  
+
   -- TypeScript
   ts_ls = {},
 
@@ -37,4 +26,7 @@ return {
       },
     },
   },
+
+  -- Note: Swift LSP (sourcekit) is configured manually in init.lua
+  -- and not managed by Mason
 }
