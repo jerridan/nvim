@@ -6,9 +6,19 @@ return {
 
   -- Python
   pyright = {},
+  
   -- Swift
-  sourcekit = {},
-  -- TypeScript,
+  sourcekit = {
+    capabilities = {
+      workspace = {
+        didChangeWatchedFiles = {
+          dynamicRegistration = true,
+        },
+      },
+    },
+  },
+  
+  -- TypeScript
   ts_ls = {},
 
   -- clangd = {},
