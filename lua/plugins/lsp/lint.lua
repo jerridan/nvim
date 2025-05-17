@@ -5,9 +5,19 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
     local lint = require 'lint'
-    lint.linters_by_ft = {
-      markdown = { 'markdownlint' },
-    }
+    
+    -- Only configure markdownlint if it's available on the system
+    local markdownlint_exists = vim.fn.executable('markdownlint') == 1
+    
+    if markdownlint_exists then
+      lint.linters_by_ft = {
+        markdown = { 'markdownlint' },
+      }
+    else
+      lint.linters_by_ft = {}
+      -- Optionally notify about missing linter if you want
+      -- vim.notify('markdownlint not found, markdown linting disabled', vim.log.levels.WARN)
+    end
 
     -- Create autocommand which carries out the actual linting
     -- on the specified events.
