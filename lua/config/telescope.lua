@@ -2,6 +2,20 @@
 
 -- Setup the telescope plugin
 require('telescope').setup {
+  defaults = {
+    mappings = {
+      i = {
+        -- Open files in new tab by default in insert mode
+        ["<CR>"] = "select_tab",
+      },
+      n = {
+        -- Open files in new tab by default in normal mode
+        ["<CR>"] = "select_tab",
+        -- Add ability to open in current window if needed with Space
+        [" "] = "select_default", 
+      },
+    },
+  },
   extensions = {
     ['ui-select'] = {
       require('telescope.themes').get_dropdown(),

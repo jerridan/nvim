@@ -56,6 +56,8 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<leader>sr` | `telescope.builtin.resume` | Search Resume |
 | Normal | `<leader>ss` | `telescope.builtin.builtin` | Search Select Telescope |
 | Normal | `<leader>sw` | `telescope.builtin.grep_string` | Search current Word |
+| Insert/Normal (Telescope) | `<CR>` | `select_tab` | Open selection in new tab |
+| Normal (Telescope) | `<Space>` | `select_default` | Open selection in current window |
 
 ## LSP (Language Server Protocol)
 
@@ -84,6 +86,16 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 |------|-----|--------|-------------|
 | Normal | `\` | `:Neotree reveal<CR>` | Open Neo-tree and reveal current file |
 | Normal | `<leader>tt` | | Toggle theme |
+
+## Neo-tree (File Explorer)
+
+| Mode | Key | Action | Description |
+|------|-----|--------|-------------|
+| Neo-tree | `<CR>` | `open_tab_drop` | Open file in a new tab |
+| Neo-tree | `t` | `open_tab_drop` | Open file in a new tab |
+| Neo-tree | `s` | `open_split` | Open file in horizontal split |
+| Neo-tree | `v` | `open_vsplit` | Open file in vertical split |
+| Neo-tree | `o` | `open_with_window_picker` | Open with window selection |
 
 ## Mini.nvim
 
