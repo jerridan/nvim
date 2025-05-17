@@ -9,7 +9,6 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<Esc>` | `:nohlsearch<CR>` | Clear search highlights |
 | All | `<Space>` | | Leader key |
 | Normal | `<leader>q` | `vim.diagnostic.setloclist` | Open diagnostic quickfix list |
-| Normal | `<leader>t` | `:tabnew<CR>` | Open a new tab |
 | Terminal | `<Esc><Esc>` | `<C-\><C-n>` | Exit terminal mode |
 
 ## Window Navigation
@@ -20,6 +19,19 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<C-j>` | `<C-w><C-j>` | Move focus to the lower window |
 | Normal | `<C-k>` | `<C-w><C-k>` | Move focus to the upper window |
 | Normal | `<C-l>` | `<C-w><C-l>` | Move focus to the right window |
+
+## Tab Management
+
+| Mode | Key | Action | Description |
+|------|-----|--------|-------------|
+| Normal | `<Tab>` | `:tabnext<CR>` | Go to next tab |
+| Normal | `<S-Tab>` | `:tabprevious<CR>` | Go to previous tab |
+| Normal | `<leader>1` - `<leader>9` | `1gt` - `9gt` | Go to specific tab by number |
+| Normal | `<leader>0` | `:tablast<CR>` | Go to last tab |
+| Normal | `<leader>tn` | `:tabnext<CR>` | Go to next tab |
+| Normal | `<leader>tp` | `:tabprevious<CR>` | Go to previous tab |
+| Normal | `<leader>to` | `:tabnew<CR>` | Open new tab |
+| Normal | `<leader>tc` | `:tabclose<CR>` | Close current tab |
 
 ## Line Navigation
 

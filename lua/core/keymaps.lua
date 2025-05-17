@@ -10,8 +10,29 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Open a new tab
-vim.keymap.set('n', '<leader>t', ':tabnew<CR>')
+-- Tab navigation
+vim.keymap.set('n', '<leader>1', '1gt', { desc = 'Go to tab 1' })
+vim.keymap.set('n', '<leader>2', '2gt', { desc = 'Go to tab 2' })
+vim.keymap.set('n', '<leader>3', '3gt', { desc = 'Go to tab 3' })
+vim.keymap.set('n', '<leader>4', '4gt', { desc = 'Go to tab 4' })
+vim.keymap.set('n', '<leader>5', '5gt', { desc = 'Go to tab 5' })
+vim.keymap.set('n', '<leader>6', '6gt', { desc = 'Go to tab 6' })
+vim.keymap.set('n', '<leader>7', '7gt', { desc = 'Go to tab 7' })
+vim.keymap.set('n', '<leader>8', '8gt', { desc = 'Go to tab 8' })
+vim.keymap.set('n', '<leader>9', '9gt', { desc = 'Go to tab 9' })
+vim.keymap.set('n', '<leader>0', ':tablast<CR>', { desc = 'Go to last tab' })
+
+-- Navigate to next/previous tabs
+vim.keymap.set('n', '<leader>tn', ':tabnext<CR>', { desc = 'Go to next tab' })
+vim.keymap.set('n', '<leader>tp', ':tabprevious<CR>', { desc = 'Go to previous tab' })
+
+-- More convenient tab navigation with Tab key
+vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>', { desc = 'Previous tab' })
+
+-- Tab management
+vim.keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = 'Open new tab' })
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { desc = 'Close current tab' })
 
 -- Exit terminal mode in the builtin terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
