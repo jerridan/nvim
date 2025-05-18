@@ -21,6 +21,8 @@ return {
       end, 
       desc = 'Git stage and commit with message' 
     },
+    -- Git push
+    { '<leader>gp', '<cmd>Git push<CR>', desc = 'Git push' },
     -- Add new keymap for GBrowse
     { '<leader>go', '<cmd>GBrowse<CR>', desc = 'Git open file in browser' },
   },
