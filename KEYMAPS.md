@@ -26,8 +26,6 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 |------|-----|--------|-------------|
 | Normal | `<Tab>` | `:tabnext<CR>` | Go to next tab |
 | Normal | `<S-Tab>` | `:tabprevious<CR>` | Go to previous tab |
-| Normal | `<leader>1` - `<leader>9` | `1gt` - `9gt` | Go to specific tab by number |
-| Normal | `<leader>0` | `:tablast<CR>` | Go to last tab |
 | Normal | `<leader>tn` | `:tabnext<CR>` | Go to next tab |
 | Normal | `<leader>tp` | `:tabprevious<CR>` | Go to previous tab |
 | Normal | `<leader>to` | `:tabnew<CR>` | Open new tab |
