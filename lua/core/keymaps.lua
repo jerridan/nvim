@@ -11,17 +11,17 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Tab navigation
--- Navigate to next/previous tabs
-vim.keymap.set('n', '<leader>tn', ':tabnext<CR>', { desc = 'Go to next tab' })
-vim.keymap.set('n', '<leader>tp', ':tabprevious<CR>', { desc = 'Go to previous tab' })
+-- Navigate between buffers (replaces tab navigation)
+vim.keymap.set('n', '<leader>bn', ':BufferLineCycleNext<CR>', { desc = 'Go to next buffer' })
+vim.keymap.set('n', '<leader>bp', ':BufferLineCyclePrev<CR>', { desc = 'Go to previous buffer' })
 
--- More convenient tab navigation with Tab key
-vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { desc = 'Next tab' })
-vim.keymap.set('n', '<S-Tab>', ':tabprevious<CR>', { desc = 'Previous tab' })
+-- More convenient buffer navigation with Tab key
+vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
 
--- Tab management
-vim.keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = 'Open new tab' })
-vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { desc = 'Close current tab' })
+-- Buffer management
+vim.keymap.set('n', '<leader>bc', ':bdelete<CR>', { desc = 'Close current buffer' })
+vim.keymap.set('n', '<leader>bo', ':BufferLineCloseOthers<CR>', { desc = 'Close other buffers' })
 
 -- Exit terminal mode in the builtin terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

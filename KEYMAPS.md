@@ -20,16 +20,20 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<C-k>` | `<C-w><C-k>` | Move focus to the upper window |
 | Normal | `<C-l>` | `<C-w><C-l>` | Move focus to the right window |
 
-## Tab Management
+## Buffer Management (replaces tabs)
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
-| Normal | `<Tab>` | `:tabnext<CR>` | Go to next tab |
-| Normal | `<S-Tab>` | `:tabprevious<CR>` | Go to previous tab |
-| Normal | `<leader>tn` | `:tabnext<CR>` | Go to next tab |
-| Normal | `<leader>tp` | `:tabprevious<CR>` | Go to previous tab |
-| Normal | `<leader>to` | `:tabnew<CR>` | Open new tab |
-| Normal | `<leader>tc` | `:tabclose<CR>` | Close current tab |
+| Normal | `<Tab>` | `:BufferLineCycleNext<CR>` | Go to next buffer |
+| Normal | `<S-Tab>` | `:BufferLineCyclePrev<CR>` | Go to previous buffer |
+| Normal | `<leader>bn` | `:BufferLineCycleNext<CR>` | Go to next buffer |
+| Normal | `<leader>bp` | `:BufferLineCyclePrev<CR>` | Go to previous buffer |
+| Normal | `<leader>bc` | `:bdelete<CR>` | Close current buffer |
+| Normal | `<leader>bo` | `:BufferLineCloseOthers<CR>` | Close other buffers |
+| Normal | `<leader>bC` | `:BufferLineCloseRight<CR>` | Close buffers to the right |
+| Normal | `<leader>bl` | `:BufferLineCloseLeft<CR>` | Close buffers to the left |
+| Normal | `<leader>bP` | `:BufferLineTogglePin<CR>` | Toggle pin buffer |
+| Normal | `<leader>b<Tab>` | `:BufferLinePick<CR>` | Pick buffer |
 
 ## Line Navigation
 
@@ -94,18 +98,15 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
-| Normal | `\` | `:Neotree reveal<CR>` | Open Neo-tree and reveal current file |
 | Normal | `<leader>tt` | | Toggle theme |
 
-## Neo-tree (File Explorer)
+## File Explorer (neo-tree)
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
-| Neo-tree | `<CR>` | `open_tab_drop` | Open file in a new tab |
-| Neo-tree | `t` | `open_tab_drop` | Open file in a new tab |
-| Neo-tree | `s` | `open_split` | Open file in horizontal split |
-| Neo-tree | `v` | `open_vsplit` | Open file in vertical split |
-| Neo-tree | `o` | `open_with_window_picker` | Open with window selection |
+| Normal | `<leader>ee` | `:Neotree toggle<CR>` | Toggle file explorer |
+| Normal | `<leader>ef` | `:Neotree reveal<CR>` | Find current file in explorer |
+| Normal | `<leader>er` | `:Neotree refresh<CR>` | Refresh file explorer |
 
 ## Mini.nvim
 

@@ -1,4 +1,4 @@
--- Nvim-Tree file explorer
+-- Nvim-Tree file explorer - disabled in favor of neo-tree
 
 return {
   'nvim-tree/nvim-tree.lua',
@@ -8,20 +8,4 @@ return {
     enabled = vim.g.have_nerd_font,
   },
   version = '*',
-  config = function()
-    require('nvim-tree').setup {
-      -- renderer = {
-      --   icons = {
-      --     glyphs = {
-      --       folder = {
-      --         arrow_closed = '\u{f054}',
-      --       },
-      --     },
-      --   },
-      -- },
-    }
-  end,
-  keys = {
-    { '<leader>e', '<cmd>NvimTreeToggle<CR>', desc = 'Toggle NvimTree' },
-  },
 }

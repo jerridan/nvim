@@ -10,5 +10,7 @@ return {
   require("plugins.ui.mini-statusline"),
   require("plugins.ui.todo-comments"),
   require("plugins.ui.indent-blankline"),
+  require("plugins.ui.edgy"),
+  require("plugins.ui.bufferline"),
   require("plugins.ui.neo-tree"),
 }
