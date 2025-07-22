@@ -107,6 +107,7 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<leader>ee` | `:Neotree toggle<CR>` | Toggle file explorer |
 | Normal | `<leader>ef` | `:Neotree reveal<CR>` | Find current file in explorer |
 | Normal | `<leader>er` | `:Neotree refresh<CR>` | Refresh file explorer |
+| Normal | `<leader>ew` | | Switch focus between explorer and editor |
 
 ## Mini.nvim
 
