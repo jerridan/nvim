@@ -48,6 +48,7 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
+| Normal | `<leader>ca` | | Copy all file contents to clipboard |
 | Normal | `<leader>cd` | | Copy directory path to clipboard |
 | Normal | `<leader>cf` | | Copy filename to clipboard |
 | Normal | `<leader>cp` | | Copy full absolute path to clipboard |

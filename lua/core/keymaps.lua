@@ -20,7 +20,9 @@ vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' 
 vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
 
 -- Buffer management
-vim.keymap.set('n', '<leader>bc', ':bdelete<CR>', { desc = 'Close current buffer' })
+vim.keymap.set('n', '<leader>bc', function()
+  require('mini.bufremove').delete(0, false)
+end, { desc = 'Close current buffer' })
 vim.keymap.set('n', '<leader>bo', ':BufferLineCloseOthers<CR>', { desc = 'Close other buffers' })
 
 -- Exit terminal mode in the builtin terminal
@@ -70,3 +72,12 @@ vim.keymap.set('n', '<leader>cd', function()
   vim.fn.setreg('+', dir_path)
   print('Copied: ' .. dir_path)
 end, { desc = 'Copy directory path to clipboard' })
+
+-- Copy all file contents to clipboard
+vim.keymap.set('n', '<leader>ca', function()
+  local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+  local content = table.concat(lines, '\n')
+  vim.fn.setreg('+', content)
+  local filename = vim.fn.expand '%:t'
+  print('Copied all contents of ' .. filename .. ' to clipboard')
+end, { desc = 'Copy all file contents to clipboard' })
