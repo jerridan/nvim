@@ -57,6 +57,12 @@ return {
           separator = true,
         },
       },
+      -- Prevent focusing neo-tree when closing buffers
+      custom_filter = function(buf_number, buf_numbers)
+        -- Don't show neo-tree in the buffer list
+        local filetype = vim.bo[buf_number].filetype
+        return filetype ~= 'neo-tree'
+      end,
     },
   },
   keys = {
@@ -66,7 +72,6 @@ return {
     { '<leader>bn', '<cmd>BufferLineCycleNext<CR>', desc = 'Next buffer' },
     { '<leader>bp', '<cmd>BufferLineCyclePrev<CR>', desc = 'Previous buffer' },
     { '<leader>bo', '<cmd>BufferLineCloseOthers<CR>', desc = 'Close other buffers' },
-    { '<leader>bc', '<cmd>bdelete<CR>', desc = 'Close current buffer' },
     { '<leader>bC', '<cmd>BufferLineCloseRight<CR>', desc = 'Close buffers to the right' },
     { '<leader>bl', '<cmd>BufferLineCloseLeft<CR>', desc = 'Close buffers to the left' },
     -- Pin/unpin buffers
