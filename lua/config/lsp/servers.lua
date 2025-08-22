@@ -10,6 +10,15 @@ return {
   -- TypeScript
   ts_ls = {},
 
+  -- JSON
+  jsonls = {
+    settings = {
+      json = {
+        validate = { enable = true },
+      },
+    },
+  },
+
   -- clangd = {},
   -- gopls = {},
   -- rust_analyzer = {},
