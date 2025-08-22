@@ -114,6 +114,10 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 
 | Mode | Key | Action | Description |
 |------|-----|--------|-------------|
+| Normal | `gcc` | `mini.comment` | Toggle comment on current line |
+| Normal | `gc{motion}` | `mini.comment` | Comment with motion (e.g., gcap for paragraph) |
+| Visual | `gc` | `mini.comment` | Toggle comment on visual selection |
+| Normal | `gbc` | `mini.comment` | Block comment (for languages that support it) |
 | Normal | `sa` | `mini.surround` | Add surrounding (sa{motion}{char}) |
 | Visual | `sa` | `mini.surround` | Add surrounding to visual selection |
 | Normal | `sd` | `mini.surround` | Delete surrounding (sd{char}) |
@@ -126,9 +130,9 @@ This document provides a comprehensive list of all keymaps in my Neovim configur
 | Normal | `<leader>gb` | `gitsigns.blame_line` | Toggle git blame for current line |
 | Normal | `<leader>gB` | `gitsigns.blame_line (full)` | Toggle git blame with full details |
 | Normal | `<leader>gD` | `gitsigns.diffthis` | Open git diff view |
-| Normal | `<leader>gk` | `vim-fugitive` | Git stage all changes and commit with message |
+| Normal | `<leader>gf` | `:LazyGitFilterCurrentFile<cr>` | LazyGit filtered to current file |
+| Normal | `<leader>gg` | `:LazyGit<cr>` | Open LazyGit TUI |
 | Normal | `<leader>go` | `:GBrowse<CR>` | Open current file in GitHub |
-| Normal | `<leader>gp` | `:Git push<CR>` | Push to remote repository |
 | Normal | `<leader>gR` | `gitsigns.reset_buffer` | Reset (unstage) entire buffer |
 | Normal | `<leader>gS` | `gitsigns.stage_buffer` | Stage entire buffer |
 | Normal | `<leader>gw` | `gitsigns.toggle_word_diff` | Toggle word diff view |
