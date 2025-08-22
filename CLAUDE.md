@@ -63,7 +63,7 @@ require('lazy').setup({
 - **Primary servers**: Configured in `lua/config/lsp/servers.lua`
 - **Mason-managed**: Most language servers are automatically installed via Mason
 - **Manual setup**: Swift's sourcekit-lsp is configured manually (not Mason-managed)
-- **Active servers**: lua_ls, pyright, ts_ls (TypeScript)
+- **Active servers**: lua_ls, pyright, ts_ls (TypeScript), jsonls (JSON)
 
 ## Key Features
 
@@ -80,11 +80,19 @@ Uses bufferline.nvim instead of traditional tabs:
 - `<leader>bo` - Close other buffers
 - Buffer state is preserved across sessions
 
+### Code Commenting
+Uses mini.comment for intelligent commenting:
+- `gcc` - Toggle comment on current line
+- `gc{motion}` - Comment with motion (e.g., `gcap` for paragraph)
+- `V` then `gc` - Comment visual selection
+- Automatically detects comment style per filetype
+
 ### Integrated Git Workflow
-- Gitsigns for inline git information
-- Fugitive for git operations
-- Diffview for reviewing changes
+- **LazyGit** - Primary git interface (`<leader>gg` for full TUI, `<leader>gf` for current file)
+- **Gitsigns** - Inline git indicators and hunk operations
+- **Fugitive** - GitHub integration (`<leader>go` to open file in browser)
 - Organized under `<leader>g` prefix with sub-categories for hunks (`<leader>gh`)
+- **Note**: LazyGit requires system installation via Homebrew/package manager
 
 ### Theme System
 Multiple colorschemes available:
@@ -124,7 +132,13 @@ Neo-tree as the primary file explorer:
 - **Lua**: lua_ls (Neovim development optimized)
 - **Python**: pyright
 - **TypeScript/JavaScript**: ts_ls
+- **JSON**: jsonls (with validation)
 - **Swift**: sourcekit-lsp (manually configured, not Mason-managed)
+
+### Formatters
+- **Lua**: stylua
+- **JavaScript/TypeScript/JSON**: prettier (auto-installed via Mason)
+- Formatting on save enabled, manual format with `<leader>f`
 
 ## Filetype-Specific Configuration
 Located in `after/ftplugin/`:
