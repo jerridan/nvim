@@ -8,5 +8,8 @@ return {
     
     -- Text surround operations
     require('mini.surround').setup()
+    
+    -- Commenting
+    require('mini.comment').setup()
   end,
 }
