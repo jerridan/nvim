@@ -7,7 +7,6 @@ return {
   require("plugins.editor.gitsigns"),
   require("plugins.editor.mini"),
   require("plugins.editor.numbertoggle"),
-  require("plugins.editor.diffview"),
   require("plugins.editor.fugitive"),
   require("plugins.editor.debug"),
   require("plugins.editor.lazygit"),
