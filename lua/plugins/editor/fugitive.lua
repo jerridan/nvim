@@ -8,22 +8,7 @@ return {
   },
   cmd = { 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
   keys = {
-    { '<leader>gk', 
-      function()
-        -- Stage all changes
-        vim.cmd('Git add -A')
-        -- Prompt for commit message and commit
-        vim.ui.input({ prompt = 'Commit message: ' }, function(msg)
-          if msg then
-            vim.cmd(string.format('Git commit -m "%s"', msg))
-          end
-        end)
-      end, 
-      desc = 'Git stage and commit with message' 
-    },
-    -- Git push
-    { '<leader>gp', '<cmd>Git push<CR>', desc = 'Git push' },
-    -- Add new keymap for GBrowse
+    -- Open current file in GitHub (still useful for quick access)
     { '<leader>go', '<cmd>GBrowse<CR>', desc = 'Git open file in browser' },
   },
 }
