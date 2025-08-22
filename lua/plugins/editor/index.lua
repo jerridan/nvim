@@ -10,4 +10,5 @@ return {
   require("plugins.editor.diffview"),
   require("plugins.editor.fugitive"),
   require("plugins.editor.debug"),
+  require("plugins.editor.lazygit"),
 }
