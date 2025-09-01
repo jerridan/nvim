@@ -43,6 +43,16 @@ return {
       end
     end, desc = 'Switch focus between explorer and editor', silent = true },
   },
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true, -- This is what toggles the visibility
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_hidden = false, -- only works on Windows for hidden files/directories
+      },
+    },
+  },
   init = function()
     -- Open Neo-tree on startup when starting with a directory
     vim.api.nvim_create_autocmd("VimEnter", {
